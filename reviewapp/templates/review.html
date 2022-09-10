@@ -1,0 +1,16 @@
+<html>
+    company_name {{ review.company_name }}
+    <br>
+    worked_here {{ review.worked_here }}
+    <br>
+    date_posted {{ review.date_posted }}
+    <br>
+    review {{ review.review }}
+    <br>
+    tags 
+    {% for tag in review.tags.all %}
+        {{ tag.tag_name }}
+    {% endfor %}
+    <br>
+    {{ source }}
+</html>

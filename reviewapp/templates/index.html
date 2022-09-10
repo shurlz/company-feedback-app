@@ -1,0 +1,18 @@
+<html>
+    <h2>REVIEW PAGE</h2>
+    <div class="reviews">
+        {% for review in all_reviews %}
+
+            <div class="specific-review">
+                <a href="/{{ review.id }}">{{ review }}</a>
+            </div>
+
+        {% endfor %}
+        
+        <p>all tags</p>
+
+        {% for tag in all_tags %}
+            {{ tag.tag_name }}
+        {% endfor %}
+    </div>
+</html>
